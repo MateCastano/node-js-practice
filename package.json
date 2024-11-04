@@ -1,8 +1,8 @@
 {
-    "name": "node-template",
+    "name": "app-gestion-usuarios-practice",
     "version": "1.0.0",
     "type": "module",
-    "description": "Plantilla base para los proyectos desarrollados en el curso de Node.JS de la plataforma LearnThis Academy",
+    "description": "Gestor de usuarios.",
     "scripts": {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js",
@@ -12,7 +12,7 @@
         "postinstall": "npm run prepare"
     },
     "author": {
-        "name": "LearnThis Academy",
+        "name": "Mateo Castano",
         "url": "https://learnthisacademy.com"
     },
     "license": "MIT",
@@ -29,10 +29,20 @@
         "prettier": "2.8.8"
     },
     "imports": {
-        "#Lib/*": "./src/lib/*"
+        "#Config/*": "./src/config/*",
+        "#Controllers/*": "./src/controllers/*",
+        "#deto/*": "./src/dto/*",
+        "#Routes/*": "./src/routes/*",
+        "#Schemas/*": "./src/schemas/*"
     },
     "lint-staged": {
         "*.js": "eslint --fix",
         "*.{js,md}": "prettier --write"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "mongodb": "^6.10.0",
+        "mongoose": "^8.8.0"
     }
 }
