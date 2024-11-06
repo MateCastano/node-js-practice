@@ -29,9 +29,10 @@
         "prettier": "2.8.8"
     },
     "imports": {
+        "#Lib/*": "./src/lib/*",
         "#Config/*": "./src/config/*",
         "#Controllers/*": "./src/controllers/*",
-        "#deto/*": "./src/dto/*",
+        "#Dto/*": "./src/dto/*",
         "#Routes/*": "./src/routes/*",
         "#Schemas/*": "./src/schemas/*"
     },
@@ -40,6 +41,10 @@
         "*.{js,md}": "prettier --write"
     },
     "dependencies": {
+        "@sinclair/typebox": "^0.33.17",
+        "ajv": "^8.17.1",
+        "ajv-errors": "^3.0.0",
+        "ajv-formats": "^3.0.1",
         "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "mongodb": "^6.10.0",
