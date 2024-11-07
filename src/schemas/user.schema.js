@@ -1,4 +1,4 @@
-import { type } from "express/lib/response.js";
+import pkg from "express/lib/response.js";
 import mongoose, {  } from "mongoose";
 
 const { Schema, model } = mongoose;
@@ -11,6 +11,6 @@ const userSchema = new Schema({
     password: {type: String, require: true}
 });
 
-const userModel = model("User", userSchema);
+const UserModel = model("User", userSchema);
 
-export default userModel;
+export default UserModel;

@@ -14,7 +14,7 @@ const RegisterDTOSchema = Type.Object({
 },{
     additionalProperties: false,
     errorMessage:{
-        additionalProperties:"El formateo del objeto no es valido"
+        additionalProperties:"El formato del objeto no es valido"
     }
 })
 
