@@ -5,10 +5,10 @@ const userRegisterController = async (req, res) =>{
     const {_id, name, surname, email, password} = req.body;
 
      const existingUserById = await userModel.findById(_id).exec();
-     if(existingUserById) return res.status(409).send('Ya existe un usuario con ese id registrado.');
+     if(existingUserById) return res.status(409).send({errors: ['Ya existe un usuuario con ese mail registrado.']});
 
      const existingUserByEmail = await userModel.findOne({email}).exec();
-     if(existingUserByEmail) return res.status(409).send('Ya existe un usuario con ese email registrado.');
+     if(existingUserByEmail) return res.status(409).send({errors: ['Ya existe un usuuario con ese mail registrado.']});
 
      const hashedPassword = await hash(password, 12);
      const user = new userModel({

@@ -1,4 +1,4 @@
-import { emailDTOSchema, idDTOSchema, nameDTOSchema, passwordDTOSchema, surnameDTOSchema } from '#Lib/dto-types.js';
+import { emailDTOSchema, idDTOSchema, nameDTOSchema, passwordDTOSchema, surnameDTOSchema } from '#Dto/dto-types.js';
 import {Type} from '@sinclair/typebox';
 import Ajv from 'ajv';
 import addErrors from 'ajv-errors';
