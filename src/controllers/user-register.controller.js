@@ -28,8 +28,8 @@ const userRegisterController = async (req, res) =>{
          const info = await transporter.sendMail({
               from: `"Tu Nombre" <${process.env.EMAIL_USER}>`,
               to: email,
-              subject: "Asunto del correo",
-              text: "Llego el email.",
+              subject: "Registro confirmado.",
+              text: "3-1",
               html: "<b>Este es el contenido en HTML</b>",
           });
   
